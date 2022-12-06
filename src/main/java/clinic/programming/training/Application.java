@@ -1,6 +1,7 @@
 package clinic.programming.training;
 
 import java.util.ArrayList;
+import org.apache.commons.lang3.StringUtils;
 
 public class Application {
 
@@ -31,7 +32,7 @@ public class Application {
     }
 
     public int countWords(String words){
-        String [] separateWords = words.split(words, ' ');
+        String [] separateWords = StringUtils.split(words, ' ');
         return (separateWords == null) ? 0 : separateWords.length;
     }
 }
