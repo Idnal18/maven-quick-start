@@ -9,6 +9,7 @@ public class Application {
     	System.out.println ("Starting Application");
 	    Application app = new Application();
         app.test();
+        System.out.println("Numero di parole nella frase inserita:" + app.countWords("SARO CON TEEEE MA TU NON DEVI MOLLARE ABBIAMO UN SOGNO NEL CUORE NAPOLI TORNA CAMPIONE"));
     }
         
     public Application() {
@@ -27,5 +28,10 @@ public class Application {
         for (String string : lista) {
             System.out.println("PAPAPAPAPAPAPA: "+string);
         }
+    }
+
+    public int countWords(String words){
+        String [] separateWords = words.split(words, ' ');
+        return (separateWords == null) ? 0 : separateWords.length;
     }
 }
